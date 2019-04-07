@@ -1,7 +1,7 @@
 // Righetti High School
 const ERHS_MAP_CENTER = {
-    lat: 34.884147,
-    lng: -120.421879
+    lat: 34.883910,
+    lng: -120.421557
 };
 const MAP_TYPE_ID = 'satellite';
 
@@ -42,31 +42,41 @@ function googleMapsCallback() {
     addERHSSites();
 }
 
-function addERHSSite(lat, lng, title, imageSrc) {
-    let site = document.createElement("div");
-    site.id = title;
-    let image = document.createElement("img");
-    image.src = imageSrc;
-    image.width = 400;
-    image.alt = title;
-    site.appendChild(image);
+function addERHSSite(lat, lng, markerText, siteImageSrc, siteTitle, kgCarbon) {
+    let header = document.createElement('h2');
+    header.innerText = siteTitle;
 
-    let sites = document.getElementById('sites');
-    sites.appendChild(site);
+    let image = document.createElement('img');
+    image.src = siteImageSrc;
+    image.width = 400;
+    image.alt = markerText;
+
+    let p = document.createElement('p');
+    p.innerHTML = '<b>2018: </b> ' + kgCarbon + 'kg of Carbon';
+
+    let content = document.createElement('div');
+    content.appendChild(header);
+    content.appendChild(image);
+    content.appendChild(p);
 
     let infoWindow = new google.maps.InfoWindow({
-        content: site
+        content: content
     });
     let markerLabel = {
-        text: title,
-        color: 'white',
-        fontSize: '10px'
+        text: markerText,
+        color: 'black',
+        fontSize: '10px',
+        fontWeight: 'bold'
+    };
+    let icon = {
+        labelOrigin: new google.maps.Point(16, 12),
+        url: 'tree.png'
     };
     let marker = new google.maps.Marker({
         position: new google.maps.LatLng(lat, lng),
-        title: title,
+        title: markerLabel,
         label: markerLabel,
-        icon: 'marker.png',
+        icon: icon,
         map: map,
         animation: google.maps.Animation.DROP
     });
@@ -81,23 +91,73 @@ function addERHSSites() {
     addERHSSite(
         34.883979,
         -120.422244,
+        '1',
+        'ehrs/site1/2.png',
         'Tree 1',
-        'ehrs/site1/2.png');
+        50);
     addERHSSite(
         34.884032,
         -120.421759,
+        '2',
+        'ehrs/site2/2.png',
         'Tree 2',
-        'ehrs/site2/2.png');
+        50);
     addERHSSite(
         34.884147,
         -120.421879,
+        '3',
+        'ehrs/site2/3.png',
         'Tree 3',
-        'ehrs/site2/3.png');
+        50);
+    addERHSSite(
+        34.884177,
+        -120.421666,
+        '4',
+        'ehrs/site4/2.png',
+        'Tree 4',
+        50);
+    addERHSSite(
+        34.884130,
+        -120.421577,
+        '5',
+        'ehrs/site2/4.png',
+        'Tree 5',
+        50);
+    addERHSSite(
+        34.884085,
+        -120.421600,
+        '6',
+        'ehrs/site2/6.png',
+        'Tree 6',
+        50);
     addERHSSite(
         34.884036,
         -120.421627,
+        '7',
+        'ehrs/site2/5.png',
         'Tree 7',
-        'ehrs/site2/5.png');
+        50);
+    addERHSSite(
+        34.883844,
+        -120.421487,
+        '8',
+        'ehrs/site3/2.png',
+        'Tree 8',
+        50);
+    addERHSSite(
+        34.883953,
+        -120.421279,
+        '9',
+        'ehrs/site3/4.png',
+        'Tree 9',
+        50);
+    addERHSSite(
+        34.883964,
+        -120.421024,
+        '10',
+        'ehrs/site3/3.png',
+        'Tree 10',
+        50);
 }
 
 function addAmazonSites() {
