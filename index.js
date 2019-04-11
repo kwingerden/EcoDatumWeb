@@ -1,15 +1,25 @@
 // Righetti High School
-const ERHS_MAP_CENTER = {
-    lat: 34.883910,
-    lng: -120.421557
+const ERHS_MAP_INFO = {
+    mapCenter: {
+        lat: 34.883910,
+        lng: -120.421557
+    },
+    startZoom: 20,
+    urlHash: '#erhs'
 };
-const AMAZON_MAP_CENTER = {
-    lat: -3.254096,
-    lng: -72.911224
+
+const AMAZON_MAP_INFO = {
+    mapCenter: {
+        lat: -3.254096,
+        lng: -72.911224
+    },
+    startZoom: 16,
+    urlHash: '#amazon'
 };
+
 const MAP_TYPE_ID = 'satellite';
 
-let mapCenter = AMAZON_MAP_CENTER;
+let mapInfo = window.location.hash === ERHS_MAP_INFO.urlHash ? ERHS_MAP_INFO : AMAZON_MAP_INFO;
 let mapElement;
 let map;
 let maxZoomService;
@@ -24,15 +34,15 @@ function panToAndMaxZoomAtLatLng(latlng) {
             console.log('Failed to get max zoom at ' + latlng);
         }
     })
-}
+};
 
 function googleMapsCallback() {
     mapElement = document.getElementById('map');
     maxZoomService = new google.maps.MaxZoomService();
     map = new google.maps.Map(mapElement, {
-        center: mapCenter,
+        center: mapInfo.mapCenter,
         mapTypeId: MAP_TYPE_ID,
-        zoom: 20,
+        zoom: mapInfo.startZoom,
         tilt: 45,
         fullscreenControl: true,
         mapTypeControl: false,
