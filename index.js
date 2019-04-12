@@ -23,12 +23,18 @@ let mapInfo = window.location.hash === ERHS_MAP_INFO.urlHash ? ERHS_MAP_INFO : A
 let mapElement;
 let map;
 let maxZoomService;
+let markers = [];
 
+function closeAllInfoWindows() {
+    markers.forEach(function(marker) {
+        marker.infoWindow.close();
+    });
+}
 function panToAndMaxZoomAtLatLng(latlng) {
     maxZoomService.getMaxZoomAtLatLng(latlng, function (response) {
         if (response.status === 'OK') {
             console.log('Max zoom at ' + latlng + ' is ' + response.zoom);
-            map.setZoom(response.zoom);
+            map.setZoom(response.zoom - 2);
             map.panTo(latlng);
         } else {
             console.log('Failed to get max zoom at ' + latlng);
@@ -63,7 +69,7 @@ function addERHSSite(lat, lng, markerText, siteImageSrc, siteTitle, kgCarbon) {
 
     let image = document.createElement('img');
     image.src = siteImageSrc;
-    image.width = 400;
+    image.width = 300;
     image.alt = markerText;
 
     let p = document.createElement('p');
@@ -74,9 +80,6 @@ function addERHSSite(lat, lng, markerText, siteImageSrc, siteTitle, kgCarbon) {
     content.appendChild(image);
     content.appendChild(p);
 
-    let infoWindow = new google.maps.InfoWindow({
-        content: content
-    });
     let markerLabel = {
         text: markerText,
         color: 'black',
@@ -96,8 +99,13 @@ function addERHSSite(lat, lng, markerText, siteImageSrc, siteTitle, kgCarbon) {
         animation: google.maps.Animation.DROP
     });
 
+    marker.infoWindow = new google.maps.InfoWindow({
+        content: content
+    });
+
     marker.addListener('click', function() {
-        infoWindow.open(map, marker);
+        closeAllInfoWindows();
+        this.infoWindow.open(map, marker);
         panToAndMaxZoomAtLatLng(marker.getPosition());
     });
 }
@@ -175,146 +183,128 @@ function addERHSSites() {
         57);
 }
 
-function addAmazonSite(lat, lng, markerText, siteImageSrc, siteTitle) {
+function addAmazonSite(lat, lng, siteImageSrc, siteTitle) {
     let header = document.createElement('h2');
     header.innerText = siteTitle;
 
     let image = document.createElement('img');
     image.src = siteImageSrc;
-    image.width = 400;
-    image.alt = markerText;
+    image.width = 300;
+    image.alt = siteTitle;
 
-    let p = document.createElement('p');
-    //p.innerHTML = '<b>2018: </b> ' + kgCarbon + 'kg of Carbon';
+    let button = document.createElement('button');
+    button.type = 'button';
+    button.class = 'btn btn-primary btn-lg btn-block';
+    button.innerText = 'Click for more information';
 
     let content = document.createElement('div');
     content.appendChild(header);
     content.appendChild(image);
-    content.appendChild(p);
+    content.appendChild(button);
 
-    let infoWindow = new google.maps.InfoWindow({
-        content: content
-    });
-    let markerLabel = {
-        text: markerText,
-        color: 'black',
-        fontSize: '10px',
-        fontWeight: 'bold'
-    };
     let icon = {
-        labelOrigin: new google.maps.Point(16, 12),
         url: 'tree.png'
     };
     let marker = new google.maps.Marker({
         position: new google.maps.LatLng(lat, lng),
         title: siteTitle,
-        label: markerLabel,
         icon: icon,
         map: map,
         animation: google.maps.Animation.DROP
     });
 
+    marker.infoWindow = new google.maps.InfoWindow({
+        content: content
+    });
+
     marker.addListener('click', function() {
-        infoWindow.open(map, marker);
+        closeAllInfoWindows();
+        this.infoWindow.open(map, marker);
         panToAndMaxZoomAtLatLng(marker.getPosition());
     });
+
+    markers.push(marker);
 }
 
 function addAmazonSites() {
     addAmazonSite(
         -3.254096,
         -72.911224,
-        '1',
         'amazon/ACTS_Colpa/0.jpg',
         'ACTS Colpa');
     addAmazonSite(
         -3.251925,
         -72.906870,
-        '2',
         'amazon/ACTS_Light_Gap_1/0.jpg',
         'ACTS Light Gap 1');
     addAmazonSite(
         -3.252082,
         -72.909280,
-        '3',
         'amazon/ACTS_Stream_5C_Site_1/0.jpg',
         'ACTS Stream 5C Site 1');
     addAmazonSite(
         -3.252321,
         -72.909226,
-        '4',
         'amazon/ACTS_Stream_5C_Site_2/0.jpg',
         'ACTS Stream 5C Site 2');
     addAmazonSite(
         -3.252352,
         -72.909386,
-        '5',
         'amazon/ACTS_Stream_5C_Site_3/0.jpg',
         'ACTS Stream 5C Site 3');
     addAmazonSite(
         -3.252294,
         -72.909422,
-        '6',
         'amazon/ACTS_Stream_5C_Site_4/0.jpg',
         'ACTS Stream 5C Site 4');
     addAmazonSite(
         -3.252444,
         -72.909214,
-        '7',
         'amazon/ACTS_Stream_5C_Site_5/0.jpg',
         'ACTS Stream 5C Site 5');
     addAmazonSite(
         -3.248916,
         -72.908256,
-        '7',
         'amazon/ACTS_Stream_A/0.jpg',
         'ACTS Stream A');
     addAmazonSite(
         -3.250191,
         -72.908406,
-        '7',
         'amazon/ACTS_Stream_B/0.jpg',
         'ACTS Stream B');
     addAmazonSite(
         -3.249309,
         -72.910340,
-        '7',
         'amazon/ACTS_Stream_D/0.jpg',
         'ACTS Stream D');
     addAmazonSite(
         -3.251251,
         -72.907290,
-        '7',
         'amazon/ACTS_Tree_5/0.jpg',
         'ACTS Tree 5');
     addAmazonSite(
         -3.251281,
         -72.907121,
-        '7',
         'amazon/ACTS_Tree_5a/0.jpg',
         'ACTS Tree 5a');
     addAmazonSite(
         -3.251281,
         -72.906731,
-        '7',
         'amazon/ACTS_Tree_8/0.jpg',
         'ACTS Tree 8');
     addAmazonSite(
         -3.252049,
         -72.906150,
-        '7',
         'amazon/ACTS_Tree_11/0.jpg',
         'ACTS Tree 11');
     addAmazonSite(
         -3.257822,
         -72.917472,
-        '7',
         'amazon/Napo_Lodge/0.jpg',
         'Napo Lodge');
     addAmazonSite(
         -3.258941,
         -72.915703,
-        '7',
         'amazon/ReNuPeru_Fish_Pond/0.jpg',
         'ReNuPeru Fish Pond');
 }
