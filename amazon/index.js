@@ -7,8 +7,10 @@ const mapInfo = {
     startZoom: 16
 };
 
-const siteData = [
+let siteData = [
     {
+        zIndex: 1,
+        isSelected: false,
         title: 'ACTS Colpa',
         location: {
             lat: -3.254096,
@@ -22,6 +24,8 @@ const siteData = [
         ]
     },
     {
+        zIndex: 2,
+        isSelected: false,
         title: 'ACTS Light Gap 1',
         location: {
             lat: -3.251925,
@@ -43,6 +47,8 @@ const siteData = [
         ]
     },
     {
+        zIndex: 3,
+        isSelected: false,
         title: 'ACTS Stream 5C Site 1',
         location: {
             lat: -3.252082,
@@ -56,6 +62,8 @@ const siteData = [
         ]
     },
     {
+        index: 4,
+        isSelected: false,
         title: 'ACTS Stream 5C Site 2',
         location: {
             lat: -3.252321,
@@ -69,6 +77,8 @@ const siteData = [
         ]
     },
     {
+        zIndex: 5,
+        isSelected: false,
         title: 'ACTS Stream 5C Site 3',
         location: {
             lat: -3.252352,
@@ -103,8 +113,41 @@ const map = new google.maps.Map(
     });
 
 const markers = [];
-siteData.forEach(function (siteData, index) {
 
+function setSelectedMarker(marker) {
+    markers.forEach(function (marker) {
+        marker.infoWindow.close();
+        marker.siteData.isSelected = false;
+        marker.setZIndex(marker.siteData.zIndex);
+    });
+    marker.infoWindow.open(map, marker);
+    map.panTo(marker.siteData.location);
+    marker.siteData.isSelected = true;
+    marker.setZIndex(100);
+}
+
+function showSiteDetails(marker) {
+    let siteDataModal = document.getElementById('site-data-modal');
+    siteDataModal.style.display = 'block';
+    let siteCloseModal = document.getElementById('site-close-modal');
+    siteCloseModal.onclick = function() {
+        siteDataModal.style.display = 'none';
+    };
+    window.onclick = function(event) {
+        if (event.target === siteDataModal) {
+            siteDataModal.style.display = 'none';
+        }
+    };
+    let siteContentModal = document.getElementById('site-content-modal');
+    siteContentModal.childNodes.forEach(function (node) {
+        node.remove();
+    });
+    let siteContent = document.createElement('p');
+    siteContent.innerText = marker.siteData.title;
+    siteContentModal.appendChild(siteContent);
+}
+
+siteData.forEach(function (siteData, index) {
     let siteIndex = index + 1;
 
     let marker = new google.maps.Marker({
@@ -112,58 +155,37 @@ siteData.forEach(function (siteData, index) {
         title: siteData.title,
         label: siteIndex.toString(),
         map: map,
-        animation: google.maps.Animation.DROP
+        animation: google.maps.Animation.DROP,
+        optimized: false,
+        zIndex: siteData.zIndex
     });
     markers.push(marker);
+
+    marker.siteData = siteData;
 
     marker.infoWindow = new google.maps.InfoWindow({
         content: siteData.title
     });
     marker.addListener('click', function() {
-        markers.forEach(function (marker) {
-            marker.infoWindow.close();
-        });
-        marker.infoWindow.open(map, marker);
+        setSelectedMarker(marker);
+    });
+    marker.addListener('dblclick', function() {
+        showSiteDetails(marker);
     });
 
     let siteRow = document.getElementById('site-row-' + siteIndex);
-    siteRow.onmouseover = function () {
-        markers.forEach(function (marker) {
-            marker.infoWindow.close();
-        });
-        marker.infoWindow.open(map, marker);
-        map.panTo(siteData.location);
+    siteRow.onclick = function () {
+        setSelectedMarker(marker);
+    };
+    siteRow.ondblclick = function () {
+        showSiteDetails(marker);
     };
 
     let siteTitle = document.getElementById('site-title-' + siteIndex);
     siteTitle.innerText = siteIndex + '.' + siteData.title;
-    siteTitle.onclick = function (event) {
-        window.alert('clicked' + this.id);
-    };
 
     let siteImage = document.getElementById('site-image-' + siteIndex);
     siteImage.src = siteData.images[0].url;
-    siteImage.onclick = function () {
-        let siteDataModal = document.getElementById('site-data-modal');
-        siteDataModal.style.display = 'block';
-        let siteCloseModal = document.getElementById('site-close-modal');
-        siteCloseModal.onclick = function() {
-            siteDataModal.style.display = 'none';
-        };
-        window.onclick = function(event) {
-            if (event.target === siteDataModal) {
-                siteDataModal.style.display = 'none';
-            }
-        };
-        let siteContentModal = document.getElementById('site-content-modal');
-        siteContentModal.childNodes.forEach(function (node) {
-            node.remove();
-        });
-        let siteContent = document.createElement('p');
-        siteContent.innerText = siteData.title;
-        siteContentModal.appendChild(siteContent);
-    };
-
 });
 
 function updateElementHeights() {
