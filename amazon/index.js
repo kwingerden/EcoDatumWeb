@@ -1,3 +1,5 @@
+'use strict';
+
 const mapInfo = {
     mapCenter: {
         lat: -3.254096,
@@ -16,9 +18,13 @@ let siteData = [
         },
         images: [
             {
+                title: 'Site',
                 url: 'ACTS_Colpa/0.jpg',
-                date: '2018-06-03'
+                date: '2018-07-11'
             }
+        ],
+        data: [
+
         ]
     },
     {
@@ -29,17 +35,23 @@ let siteData = [
         },
         images: [
             {
+                title: 'Site',
                 url: 'ACTS_Light_Gap_1/0.jpg',
-                date: '2018-06-03'
+                date: '2018-07-11'
             },
             {
+                title: 'Front',
                 url: 'ACTS_Light_Gap_1/1.jpg',
-                date: '2018-06-03'
+                date: '2018-07-11'
             },
             {
+                title: 'Top',
                 url: 'ACTS_Light_Gap_1/2.jpg',
-                date: '2018-06-03'
+                date: '2018-07-11'
             }
+        ],
+        data: [
+
         ]
     },
     {
@@ -50,8 +62,53 @@ let siteData = [
         },
         images: [
             {
+                title: 'Site',
                 url: 'ACTS_Stream_5C_Site_1/0.jpg',
                 date: '2018-06-03'
+            }
+        ],
+        data: [
+            {
+                date: '2018-07-11',
+                factor: 'Soil',
+                type: 'Phosphorus',
+                value: '15',
+                unit: 'lb/a'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Soil',
+                type: 'Nitrogen',
+                value: '0',
+                unit: 'lb/a'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Water',
+                type: 'Turbidity',
+                value: '60',
+                unit: 'JTU (Jackson Turbidity Units)'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Water',
+                type: 'Nitrate',
+                value: '0',
+                unit: 'ppm (Parts Per Million)'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Water',
+                type: 'Phosphate',
+                value: '2',
+                unit: 'ppm (Parts Per Million)'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Water',
+                type: 'pH',
+                value: '6',
+                unit: 'Water pH Scale'
             }
         ]
     },
@@ -63,9 +120,13 @@ let siteData = [
         },
         images: [
             {
+                title: 'Site',
                 url: 'ACTS_Stream_5C_Site_2/0.jpg',
                 date: '2018-06-03'
             }
+        ],
+        data: [
+
         ]
     },
     {
@@ -76,9 +137,13 @@ let siteData = [
         },
         images: [
             {
+                title: 'Site',
                 url: 'ACTS_Stream_5C_Site_3/0.jpg',
                 date: '2018-06-03'
             }
+        ],
+        data: [
+
         ]
     }
 ];
@@ -104,7 +169,7 @@ const map = new google.maps.Map(
 
 const markers = [];
 
-function setSelectedMarker(marker) {
+function setSelectedMarker(marker, scroll = true) {
     markers.forEach(function (marker, index) {
         marker.infoWindow.close();
         let siteIndex = index + 1;
@@ -114,13 +179,18 @@ function setSelectedMarker(marker) {
     });
     let rowElement = document.getElementById('site-row-' + marker.zIndex);
     rowElement.style.background = 'lightgray';
-    rowElement.scrollIntoView();
+    if (scroll) {
+        rowElement.scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
     marker.infoWindow.open(map, marker);
     map.panTo(marker.siteData.location);
     marker.setZIndex(100);
 }
 
 function prepareForModal() {
+    /*
     let siteDataModal = document.getElementById('site-data-modal');
     siteDataModal.style.display = 'block';
 
@@ -134,6 +204,7 @@ function prepareForModal() {
             siteDataModal.style.display = 'none';
         }
     };
+    */
 
     let dataCarousel = document.getElementById('data-carousel');
     dataCarousel.innerHTML = '';
@@ -141,33 +212,43 @@ function prepareForModal() {
     //dataTable.innerHTML = '';
 
     return {
-        dataCarousel: dataCarousel,
-        dataTable: dataTable
+        dataCarousel: dataCarousel
     };
 }
 
 function showSiteDetails(marker) {
-    let dataDivs = prepareForModal();
-
-    let siteTitle = document.createElement('h1');
-    siteTitle.innerText = marker.siteData.title;
-    dataDivs.dataCarousel.appendChild(siteTitle);
+    let dataCarousel = document.getElementById('data-carousel');
+    dataCarousel.innerHTML = '';
 
     let owlCarouselDiv = document.createElement('div');
     owlCarouselDiv.className = 'owl-carousel owl-theme';
-    dataDivs.dataCarousel.appendChild(owlCarouselDiv);
+    dataCarousel.appendChild(owlCarouselDiv);
 
-    for (let i = 1; i < 20; i++) {
-        let h4Element = document.createElement('h4');
-        h4Element.innerText = i.toString();
+    marker.siteData.images.forEach(function (img) {
+        let titleElement = document.createElement('p');
+        titleElement.style.textAlign = 'center';
+        titleElement.style.fontSize = '10px';
+        titleElement.innerText = img.title == null ? ' ' : img.title;
+
+        let imgElement = document.createElement('img');
+        imgElement.src = img.url;
+
+        let dateLabel = document.createElement('p');
+        dateLabel.style.textAlign = 'center';
+        dateLabel.style.fontSize = '10px';
+        dateLabel.innerText = img.date;
+
         let itemDiv = document.createElement('div');
         itemDiv.className = 'item';
-        itemDiv.appendChild(h4Element);
+        itemDiv.appendChild(titleElement);
+        itemDiv.appendChild(imgElement);
+        itemDiv.appendChild(dateLabel);
+
         owlCarouselDiv.appendChild(itemDiv);
-    }
+    });
 
     $('.owl-carousel').owlCarousel({
-        loop: true,
+        loop: false,
         margin: 10,
         nav: true,
         responsive: {
@@ -183,9 +264,48 @@ function showSiteDetails(marker) {
         }
     });
 
-    //let dataTable = document.getElementById('data-table');
-    //dataDivs.dataTable.appendChild(dataTable);
-    $('#data').DataTable();
+    let dataTable = document.getElementById('data-table');
+    dataTable.style.display = 'none';
+    let dataTableBody = document.getElementById('data-table-body');
+    dataTableBody.innerHTML = '';
+    if (marker.siteData.data.length > 0) {
+        marker.siteData.data.forEach(function (data) {
+            let dateColumn = document.createElement('td');
+            dateColumn.innerText = data.date;
+
+            let factorColumn = document.createElement('td');
+            factorColumn.innerText = data.factor;
+
+            let typeColumn = document.createElement('td');
+            typeColumn.innerText = data.type;
+
+            let valueColumn = document.createElement('td');
+            valueColumn.innerText = data.value;
+
+            let unitColumn = document.createElement('td');
+            unitColumn.innerText = data.unit;
+
+            let tableRow = document.createElement('tr');
+            tableRow.appendChild(dateColumn);
+            tableRow.appendChild(factorColumn);
+            tableRow.appendChild(typeColumn);
+            tableRow.appendChild(valueColumn);
+            tableRow.appendChild(unitColumn);
+
+            dataTableBody.appendChild(tableRow);
+        });
+        $('#data').DataTable();
+        dataTable.style.display = 'block';
+    }
+
+    $('#site-data-modal').dialog({
+        title: marker.siteData.title,
+        modal: true,
+        width: $(window).width() - 100,
+        height: $(window).height() - 100
+    });
+    let topElement = document.getElementById('top');
+    topElement.scrollIntoView();
 }
 
 siteData.forEach(function (siteData, index) {
@@ -219,14 +339,14 @@ siteData.forEach(function (siteData, index) {
 
     let siteRow = document.getElementById('site-row-' + siteIndex);
     siteRow.ondblclick = function () {
-        setSelectedMarker(marker);
+        setSelectedMarker(marker, false);
         showSiteDetails(marker);
     };
 
     let siteTitle = document.getElementById('site-title-' + siteIndex);
     siteTitle.innerText = siteIndex + '.' + siteData.title;
     siteTitle.onclick = function () {
-        setSelectedMarker(marker);
+        setSelectedMarker(marker, false);
     };
     siteTitle.ondblclick = function () {
         showSiteDetails(marker);
@@ -244,7 +364,7 @@ siteData.forEach(function (siteData, index) {
         siteImage.style.border = '';
     };
     siteImage.onclick = function () {
-        setSelectedMarker(marker);
+        setSelectedMarker(marker, false);
     };
     siteImage.ondblclick = function () {
         showSiteDetails(marker);
