@@ -9,8 +9,6 @@ const mapInfo = {
 
 let siteData = [
     {
-        zIndex: 1,
-        isSelected: false,
         title: 'ACTS Colpa',
         location: {
             lat: -3.254096,
@@ -24,8 +22,6 @@ let siteData = [
         ]
     },
     {
-        zIndex: 2,
-        isSelected: false,
         title: 'ACTS Light Gap 1',
         location: {
             lat: -3.251925,
@@ -47,8 +43,6 @@ let siteData = [
         ]
     },
     {
-        zIndex: 3,
-        isSelected: false,
         title: 'ACTS Stream 5C Site 1',
         location: {
             lat: -3.252082,
@@ -62,8 +56,6 @@ let siteData = [
         ]
     },
     {
-        index: 4,
-        isSelected: false,
         title: 'ACTS Stream 5C Site 2',
         location: {
             lat: -3.252321,
@@ -77,8 +69,6 @@ let siteData = [
         ]
     },
     {
-        zIndex: 5,
-        isSelected: false,
         title: 'ACTS Stream 5C Site 3',
         location: {
             lat: -3.252352,
@@ -115,36 +105,87 @@ const map = new google.maps.Map(
 const markers = [];
 
 function setSelectedMarker(marker) {
-    markers.forEach(function (marker) {
+    markers.forEach(function (marker, index) {
         marker.infoWindow.close();
-        marker.siteData.isSelected = false;
-        marker.setZIndex(marker.siteData.zIndex);
+        let siteIndex = index + 1;
+        marker.setZIndex(siteIndex);
+        let rowElement = document.getElementById('site-row-' + siteIndex);
+        rowElement.style.background = 'white';
     });
+    let rowElement = document.getElementById('site-row-' + marker.zIndex);
+    rowElement.style.background = 'lightgray';
+    rowElement.scrollIntoView();
     marker.infoWindow.open(map, marker);
     map.panTo(marker.siteData.location);
-    marker.siteData.isSelected = true;
     marker.setZIndex(100);
 }
 
-function showSiteDetails(marker) {
+function prepareForModal() {
     let siteDataModal = document.getElementById('site-data-modal');
     siteDataModal.style.display = 'block';
+
     let siteCloseModal = document.getElementById('site-close-modal');
-    siteCloseModal.onclick = function() {
+    siteCloseModal.onclick = function () {
         siteDataModal.style.display = 'none';
     };
-    window.onclick = function(event) {
+
+    window.onclick = function (event) {
         if (event.target === siteDataModal) {
             siteDataModal.style.display = 'none';
         }
     };
-    let siteContentModal = document.getElementById('site-content-modal');
-    siteContentModal.childNodes.forEach(function (node) {
-        node.remove();
+
+    let dataCarousel = document.getElementById('data-carousel');
+    dataCarousel.innerHTML = '';
+    let dataTable = document.getElementById('data-table');
+    //dataTable.innerHTML = '';
+
+    return {
+        dataCarousel: dataCarousel,
+        dataTable: dataTable
+    };
+}
+
+function showSiteDetails(marker) {
+    let dataDivs = prepareForModal();
+
+    let siteTitle = document.createElement('h1');
+    siteTitle.innerText = marker.siteData.title;
+    dataDivs.dataCarousel.appendChild(siteTitle);
+
+    let owlCarouselDiv = document.createElement('div');
+    owlCarouselDiv.className = 'owl-carousel owl-theme';
+    dataDivs.dataCarousel.appendChild(owlCarouselDiv);
+
+    for (let i = 1; i < 20; i++) {
+        let h4Element = document.createElement('h4');
+        h4Element.innerText = i.toString();
+        let itemDiv = document.createElement('div');
+        itemDiv.className = 'item';
+        itemDiv.appendChild(h4Element);
+        owlCarouselDiv.appendChild(itemDiv);
+    }
+
+    $('.owl-carousel').owlCarousel({
+        loop: true,
+        margin: 10,
+        nav: true,
+        responsive: {
+            0: {
+                items: 1
+            },
+            600: {
+                items: 3
+            },
+            1000: {
+                items: 5
+            }
+        }
     });
-    let siteContent = document.createElement('p');
-    siteContent.innerText = marker.siteData.title;
-    siteContentModal.appendChild(siteContent);
+
+    //let dataTable = document.getElementById('data-table');
+    //dataDivs.dataTable.appendChild(dataTable);
+    $('#data').DataTable();
 }
 
 siteData.forEach(function (siteData, index) {
@@ -157,35 +198,57 @@ siteData.forEach(function (siteData, index) {
         map: map,
         animation: google.maps.Animation.DROP,
         optimized: false,
-        zIndex: siteData.zIndex
+        zIndex: siteIndex
     });
     markers.push(marker);
 
     marker.siteData = siteData;
 
-    marker.infoWindow = new google.maps.InfoWindow({
-        content: siteData.title
-    });
-    marker.addListener('click', function() {
-        setSelectedMarker(marker);
-    });
-    marker.addListener('dblclick', function() {
+    let titleElement = document.createElement('a');
+    titleElement.href = '#';
+    titleElement.innerText = siteData.title;
+    titleElement.onclick = function() {
         showSiteDetails(marker);
+    };
+    marker.infoWindow = new google.maps.InfoWindow({
+        content: titleElement
+    });
+    marker.addListener('click', function () {
+        setSelectedMarker(marker);
     });
 
     let siteRow = document.getElementById('site-row-' + siteIndex);
-    siteRow.onclick = function () {
-        setSelectedMarker(marker);
-    };
     siteRow.ondblclick = function () {
+        setSelectedMarker(marker);
         showSiteDetails(marker);
     };
 
     let siteTitle = document.getElementById('site-title-' + siteIndex);
     siteTitle.innerText = siteIndex + '.' + siteData.title;
+    siteTitle.onclick = function () {
+        setSelectedMarker(marker);
+    };
+    siteTitle.ondblclick = function () {
+        showSiteDetails(marker);
+    };
 
     let siteImage = document.getElementById('site-image-' + siteIndex);
     siteImage.src = siteData.images[0].url;
+    siteImage.style.cursor = 'pointer';
+    siteImage.onmouseover = function () {
+        siteImage.style.borderColor = 'blue';
+        siteImage.style.borderStyle = 'solid';
+        siteImage.style.borderWidth = 'thin';
+    };
+    siteImage.onmouseout = function () {
+        siteImage.style.border = '';
+    };
+    siteImage.onclick = function () {
+        setSelectedMarker(marker);
+    };
+    siteImage.ondblclick = function () {
+        showSiteDetails(marker);
+    };
 });
 
 function updateElementHeights() {
