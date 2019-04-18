@@ -56,41 +56,6 @@
             height: 600px;
         }
 
-        .site-data-modal {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1000; /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%; /* Full width */
-            height: 100%; /* Full height */
-            overflow: auto; /* Enable scroll if needed */
-            background-color: rgb(0, 0, 0); /* Fallback color */
-            background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-        }
-
-        .site-content-modal {
-            background-color: #fefefe;
-            margin: 15% auto; /* 15% from the top and centered */
-            padding: 20px;
-            border: 1px solid #888;
-            width: 100%; /* Could be more or less, depending on screen size */
-        }
-
-        .site-close-modal {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-
-        .site-close-modal:hover,
-        .site-close-modal:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
         html, body {
             height: 100%;
             margin: 0;
@@ -170,6 +135,19 @@
                 </div>
             </td>
         </tr>
+        <tr id="site-row-6">
+            <td>
+                <div>
+                    <a id="site-title-6" href="#">4. Site Title 2</a>
+                    <p></p>
+                    <img id="site-image-6"
+                         src="ACTS_Colpa/0.jpg"
+                         alt="Site Title 6"
+                         width="200px"
+                         height="200px">
+                </div>
+            </td>
+        </tr>
     </table>
 </div>
 
@@ -181,8 +159,8 @@
         <div class="owl-carousel owl-theme">
         </div>
     </div>
-    <div id="data-table">
-        <table id="data" class="display" style="width:100%">
+    <div id="data-table-div">
+        <table id="data-table" class="display" style="width:100%">
             <thead>
             <tr>
                 <th>Date</th>

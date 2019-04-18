@@ -64,7 +64,7 @@ let siteData = [
             {
                 title: 'Site',
                 url: 'ACTS_Stream_5C_Site_1/0.jpg',
-                date: '2018-06-03'
+                date: '2018-07-11'
             }
         ],
         data: [
@@ -122,11 +122,52 @@ let siteData = [
             {
                 title: 'Site',
                 url: 'ACTS_Stream_5C_Site_2/0.jpg',
-                date: '2018-06-03'
+                date: '2018-07-11'
             }
         ],
         data: [
-
+            {
+                date: '2018-07-11',
+                factor: 'Soil',
+                type: 'Phosphorus',
+                value: '5',
+                unit: 'lb/a'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Soil',
+                type: 'Nitrogen',
+                value: '0',
+                unit: 'lb/a'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Water',
+                type: 'Turbidity',
+                value: '70',
+                unit: 'JTU (Jackson Turbidity Units)'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Water',
+                type: 'Nitrate',
+                value: '0',
+                unit: 'ppm (Parts Per Million)'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Water',
+                type: 'Phosphate',
+                value: '1',
+                unit: 'ppm (Parts Per Million)'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Water',
+                type: 'pH',
+                value: '8',
+                unit: 'Water pH Scale'
+            }
         ]
     },
     {
@@ -139,11 +180,48 @@ let siteData = [
             {
                 title: 'Site',
                 url: 'ACTS_Stream_5C_Site_3/0.jpg',
-                date: '2018-06-03'
+                date: '2018-07-11'
             }
         ],
         data: [
 
+        ]
+    },
+    {
+        title: 'ACTS Stream 5C Site 4',
+        location: {
+            lat: -3.252294,
+            lng: -72.909422
+        },
+        images: [
+            {
+                title: 'Site',
+                url: 'ACTS_Stream_5C_Site_4/0.jpg',
+                date: '2018-07-11'
+            }
+        ],
+        data: [
+            {
+                date: '2018-07-11',
+                factor: 'Soil',
+                type: 'Phosphorus',
+                value: '10',
+                unit: 'lb/a'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Soil',
+                type: 'Nitrogen',
+                value: '0',
+                unit: 'lb/a'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Soil',
+                type: 'Potassium',
+                value: 'Low',
+                unit: 'Soil Potassium Scale'
+            }
         ]
     }
 ];
@@ -187,33 +265,6 @@ function setSelectedMarker(marker, scroll = true) {
     marker.infoWindow.open(map, marker);
     map.panTo(marker.siteData.location);
     marker.setZIndex(100);
-}
-
-function prepareForModal() {
-    /*
-    let siteDataModal = document.getElementById('site-data-modal');
-    siteDataModal.style.display = 'block';
-
-    let siteCloseModal = document.getElementById('site-close-modal');
-    siteCloseModal.onclick = function () {
-        siteDataModal.style.display = 'none';
-    };
-
-    window.onclick = function (event) {
-        if (event.target === siteDataModal) {
-            siteDataModal.style.display = 'none';
-        }
-    };
-    */
-
-    let dataCarousel = document.getElementById('data-carousel');
-    dataCarousel.innerHTML = '';
-    let dataTable = document.getElementById('data-table');
-    //dataTable.innerHTML = '';
-
-    return {
-        dataCarousel: dataCarousel
-    };
 }
 
 function showSiteDetails(marker) {
@@ -264,10 +315,60 @@ function showSiteDetails(marker) {
         }
     });
 
-    let dataTable = document.getElementById('data-table');
-    dataTable.style.display = 'none';
-    let dataTableBody = document.getElementById('data-table-body');
-    dataTableBody.innerHTML = '';
+    let dataTableDiv = document.getElementById('data-table-div');
+    dataTableDiv.innerHTML = '';
+
+    let dataTable = document.createElement('table');
+    dataTable.id = 'data-table';
+    dataTable.className = 'display';
+    dataTable.style.width = '100%';
+
+    let dataTableHeader = document.createElement('thead');
+    let dataTableHeaderRow = document.createElement('tr');
+    let dataTableHeaderDate = document.createElement('th');
+    dataTableHeaderDate.innerText = 'Date';
+    let dataTableHeaderFactor = document.createElement('th');
+    dataTableHeaderFactor.innerText = 'Factor';
+    let dataTableHeaderType = document.createElement('th');
+    dataTableHeaderType.innerText = 'Type';
+    let dataTableHeaderValue = document.createElement('th');
+    dataTableHeaderValue.innerText = 'Value';
+    let dataTableHeaderUnit = document.createElement('th');
+    dataTableHeaderUnit.innerText = 'Unit';
+    dataTableHeaderRow.appendChild(dataTableHeaderDate);
+    dataTableHeaderRow.appendChild(dataTableHeaderFactor);
+    dataTableHeaderRow.appendChild(dataTableHeaderType);
+    dataTableHeaderRow.appendChild(dataTableHeaderValue);
+    dataTableHeaderRow.appendChild(dataTableHeaderUnit);
+    dataTableHeader.appendChild(dataTableHeaderRow);
+
+    let dataTableBody = document.createElement('tbody');
+
+    let dataTableFooter = document.createElement('tfoot');
+    let dataTableFooterRow = document.createElement('tr');
+    let dataTableFooterDate = document.createElement('th');
+    dataTableFooterDate.innerText = 'Date';
+    let dataTableFooterFactor = document.createElement('th');
+    dataTableFooterFactor.innerText = 'Factor';
+    let dataTableFooterType = document.createElement('th');
+    dataTableFooterType.innerText = 'Type';
+    let dataTableFooterValue = document.createElement('th');
+    dataTableFooterValue.innerText = 'Value';
+    let dataTableFooterUnit = document.createElement('th');
+    dataTableFooterUnit.innerText = 'Unit';
+    dataTableFooterRow.appendChild(dataTableFooterDate);
+    dataTableFooterRow.appendChild(dataTableFooterFactor);
+    dataTableFooterRow.appendChild(dataTableFooterType);
+    dataTableFooterRow.appendChild(dataTableFooterValue);
+    dataTableFooterRow.appendChild(dataTableFooterUnit);
+    dataTableFooter.appendChild(dataTableFooterRow);
+
+    dataTable.appendChild(dataTableHeader);
+    dataTable.appendChild(dataTableBody);
+    dataTable.appendChild(dataTableFooter);
+
+    dataTableDiv.appendChild(dataTable);
+
     if (marker.siteData.data.length > 0) {
         marker.siteData.data.forEach(function (data) {
             let dateColumn = document.createElement('td');
@@ -294,9 +395,8 @@ function showSiteDetails(marker) {
 
             dataTableBody.appendChild(tableRow);
         });
-        $('#data').DataTable();
-        dataTable.style.display = 'block';
     }
+    $('#data-table').DataTable();
 
     $('#site-data-modal').dialog({
         title: marker.siteData.title,
