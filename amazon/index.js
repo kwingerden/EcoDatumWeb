@@ -23,6 +23,9 @@ let siteData = [
                 date: '2018-07-11'
             }
         ],
+        notes: [
+
+        ],
         data: [
 
         ]
@@ -50,6 +53,9 @@ let siteData = [
                 date: '2018-07-11'
             }
         ],
+        notes: [
+
+        ],
         data: [
 
         ]
@@ -66,6 +72,9 @@ let siteData = [
                 url: 'ACTS_Stream_5C_Site_1/0.jpg',
                 date: '2018-07-11'
             }
+        ],
+        notes: [
+
         ],
         data: [
             {
@@ -125,6 +134,9 @@ let siteData = [
                 date: '2018-07-11'
             }
         ],
+        notes: [
+
+        ],
         data: [
             {
                 date: '2018-07-11',
@@ -183,6 +195,9 @@ let siteData = [
                 date: '2018-07-11'
             }
         ],
+        notes: [
+
+        ],
         data: [
 
         ]
@@ -199,6 +214,11 @@ let siteData = [
                 url: 'ACTS_Stream_5C_Site_4/0.jpg',
                 date: '2018-07-11'
             }
+        ],
+        notes: [
+            "Large snail",
+            "Stick-like scorpion (more specifically)",
+            "Found helicopter dragonfly"
         ],
         data: [
             {
@@ -221,6 +241,34 @@ let siteData = [
                 type: 'Potassium',
                 value: 'Low',
                 unit: 'Soil Potassium Scale'
+            }
+        ]
+    },
+    {
+        title: 'ACTS Stream 5C Site 5',
+        location: {
+            lat: -3.252444,
+            lng: -72.909214
+        },
+        images: [
+            {
+                title: 'Site',
+                url: 'ACTS_Stream_5C_Site_5/0.jpg',
+                date: '2018-07-11'
+            }
+        ],
+        notes: [
+            "Prawn, wolf fish",
+            "Note: fish trap picture",
+            "Fish hauls are from all 5C sites"
+        ],
+        data: [
+            {
+                date: '2018-07-11',
+                factor: 'Water',
+                type: 'pH',
+                value: '6.5',
+                unit: 'Water pH Scale'
             }
         ]
     }
@@ -313,6 +361,17 @@ function showSiteDetails(marker) {
                 items: 5
             }
         }
+    });
+
+    let dataNotesText = document.getElementById('data-notes-text');
+    dataNotesText.innerText = '';
+    marker.siteData.notes.forEach(function (note, index) {
+        if (index === 0) {
+            dataNotesText.value = note;
+        } else {
+            dataNotesText.value = dataNotesText.value + '\n' + note;
+        }
+
     });
 
     let dataTableDiv = document.getElementById('data-table-div');
