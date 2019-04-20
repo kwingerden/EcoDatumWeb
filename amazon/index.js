@@ -27,7 +27,27 @@ let siteData = [
 
         ],
         data: [
-
+            {
+                date: '2018-07-11',
+                factor: 'Location',
+                type: 'Latitude',
+                value: '-3.254096',
+                unit: '°'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Location',
+                type: 'Longitude',
+                value: '-72.911224',
+                unit: '°'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Location',
+                type: 'Altitude',
+                value: '117.653498',
+                unit: 'm'
+            }
         ]
     },
     {
@@ -57,7 +77,27 @@ let siteData = [
 
         ],
         data: [
-
+            {
+                date: '2018-07-11',
+                factor: 'Location',
+                type: 'Latitude',
+                value: '-3.251925',
+                unit: '°'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Location',
+                type: 'Longitude',
+                value: '-72.906870',
+                unit: '°'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Location',
+                type: 'Altitude',
+                value: '134.243697',
+                unit: 'Meters'
+            }
         ]
     },
     {
@@ -77,6 +117,27 @@ let siteData = [
 
         ],
         data: [
+            {
+                date: '2018-07-11',
+                factor: 'Location',
+                type: 'Latitude',
+                value: '-3.252082',
+                unit: '°'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Location',
+                type: 'Longitude',
+                value: '-72.909280',
+                unit: '°'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Location',
+                type: 'Altitude',
+                value: '119.714079',
+                unit: 'm'
+            },
             {
                 date: '2018-07-11',
                 factor: 'Soil',
@@ -117,7 +178,7 @@ let siteData = [
                 factor: 'Water',
                 type: 'pH',
                 value: '6',
-                unit: 'Water pH Scale'
+                unit: 'pH Scale'
             }
         ]
     },
@@ -138,6 +199,27 @@ let siteData = [
 
         ],
         data: [
+            {
+                date: '2018-07-11',
+                factor: 'Location',
+                type: 'Latitude',
+                value: '-3.252321',
+                unit: '°'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Location',
+                type: 'Longitude',
+                value: '-72.909226',
+                unit: '°'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Location',
+                type: 'Altitude',
+                value: '114.823950',
+                unit: 'm'
+            },
             {
                 date: '2018-07-11',
                 factor: 'Soil',
@@ -178,7 +260,7 @@ let siteData = [
                 factor: 'Water',
                 type: 'pH',
                 value: '8',
-                unit: 'Water pH Scale'
+                unit: 'pH Scale'
             }
         ]
     },
@@ -199,7 +281,27 @@ let siteData = [
 
         ],
         data: [
-
+            {
+                date: '2018-07-11',
+                factor: 'Location',
+                type: 'Latitude',
+                value: '-3.252352',
+                unit: '°'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Location',
+                type: 'Longitude',
+                value: '-72.909386',
+                unit: '°'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Location',
+                type: 'Altitude',
+                value: '114.267645',
+                unit: 'm'
+            }
         ]
     },
     {
@@ -221,6 +323,27 @@ let siteData = [
             "Found helicopter dragonfly"
         ],
         data: [
+            {
+                date: '2018-07-11',
+                factor: 'Location',
+                type: 'Latitude',
+                value: '-3.252294',
+                unit: '°'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Location',
+                type: 'Longitude',
+                value: '-72.909422',
+                unit: '°'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Location',
+                type: 'Altitude',
+                value: '115.125077',
+                unit: 'm'
+            },
             {
                 date: '2018-07-11',
                 factor: 'Soil',
@@ -265,14 +388,742 @@ let siteData = [
         data: [
             {
                 date: '2018-07-11',
+                factor: 'Location',
+                type: 'Latitude',
+                value: '-3.252444',
+                unit: '°'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Location',
+                type: 'Longitude',
+                value: '-72.909214',
+                unit: '°'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Location',
+                type: 'Altitude',
+                value: '112.993025',
+                unit: 'm'
+            },
+            {
+                date: '2018-07-11',
                 factor: 'Water',
                 type: 'pH',
                 value: '6.5',
-                unit: 'Water pH Scale'
+                unit: 'pH Scale'
+            }
+        ]
+    },
+    {
+        title: 'ACTS Stream A',
+        location: {
+            lat: -3.248916,
+            lng: -72.908256
+        },
+        images: [
+            {
+                title: 'Site',
+                url: 'ACTS_Stream_A/0.jpg',
+                date: '2018-07-07'
+            }
+        ],
+        notes: [
+
+        ],
+        data: [
+            {
+                date: '2018-07-07',
+                factor: 'Location',
+                type: 'Latitude',
+                value: '-3.248916',
+                unit: '°'
+            },
+            {
+                date: '2018-07-07',
+                factor: 'Location',
+                type: 'Longitude',
+                value: '-72.908256',
+                unit: '°'
+            },
+            {
+                date: '2018-07-07',
+                factor: 'Location',
+                type: 'Altitude',
+                value: '114.578340',
+                unit: 'm'
+            },
+            {
+                date: '2018-07-07',
+                factor: 'Water',
+                type: 'Dissolved Oxygen',
+                value: '1.02',
+                unit: 'mg/L'
+            },
+            {
+                date: '2018-07-07',
+                factor: 'Water',
+                type: 'Temperature',
+                value: '23.8',
+                unit: '°C'
+            }
+        ]
+    },
+    {
+        title: 'ACTS Stream B',
+        location: {
+            lat: -3.250191,
+            lng: -72.908406
+        },
+        images: [
+            {
+                title: 'Site',
+                url: 'ACTS_Stream_B/0.jpg',
+                date: '2018-07-07'
+            }
+        ],
+        notes: [
+
+        ],
+        data: [
+            {
+                date: '2018-07-07',
+                factor: 'Location',
+                type: 'Latitude',
+                value: '-3.250191',
+                unit: '°'
+            },
+            {
+                date: '2018-07-07',
+                factor: 'Location',
+                type: 'Longitude',
+                value: '-72.908406',
+                unit: '°'
+            },
+            {
+                date: '2018-07-07',
+                factor: 'Location',
+                type: 'Altitude',
+                value: '125.301633',
+                unit: 'm'
+            },
+            {
+                date: '2018-07-07',
+                factor: 'Water',
+                type: 'Dissolved Oxygen',
+                value: '3.22',
+                unit: 'mg/L'
+            },
+            {
+                date: '2018-07-07',
+                factor: 'Water',
+                type: 'Temperature',
+                value: '23.8',
+                unit: '°C'
+            }
+        ]
+    },
+    {
+        title: 'ACTS Stream D',
+        location: {
+            lat: -3.249309,
+            lng: -72.910340
+        },
+        images: [
+            {
+                title: 'Site',
+                url: 'ACTS_Stream_D/0.jpg',
+                date: '2018-07-07'
+            }
+        ],
+        notes: [
+
+        ],
+        data: [
+            {
+                date: '2018-07-07',
+                factor: 'Location',
+                type: 'Latitude',
+                value: '-3.249309',
+                unit: '°'
+            },
+            {
+                date: '2018-07-07',
+                factor: 'Location',
+                type: 'Longitude',
+                value: '-72.910340',
+                unit: '°'
+            },
+            {
+                date: '2018-07-07',
+                factor: 'Location',
+                type: 'Altitude',
+                value: '114.900288',
+                unit: 'm'
+            },
+            {
+                date: '2018-07-7',
+                factor: 'Water',
+                type: 'Dissolved Oxygen',
+                value: '5.03',
+                unit: 'mg/L'
+            },
+            {
+                date: '2018-07-7',
+                factor: 'Water',
+                type: 'Temperature',
+                value: '24.5',
+                unit: '°C'
+            }
+        ]
+    },
+    {
+        title: 'ACTS Tree 5',
+        location: {
+            lat: -3.251251,
+            lng: -72.907290
+        },
+        images: [
+            {
+                title: 'Site',
+                url: 'ACTS_Tree_5/0.jpg',
+                date: '2018-07-06'
+            },
+            {
+                title: 'Front',
+                url: 'ACTS_Tree_5/1.jpg',
+                date: '2018-07-06'
+            },
+            {
+                title: 'Top',
+                url: 'ACTS_Tree_5/2.jpg',
+                date: '2018-07-06'
+            }
+        ],
+        notes: [
+
+        ],
+        data: [
+            {
+                date: '2018-07-06',
+                factor: 'Location',
+                type: 'Latitude',
+                value: '-3.251251',
+                unit: '°'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Location',
+                type: 'Longitude',
+                value: '-72.907290',
+                unit: '°'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Location',
+                type: 'Altitude',
+                value: '137.442628',
+                unit: 'm'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Air',
+                type: 'UVB',
+                value: '16',
+                unit: 'mW/m^2'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Soil',
+                type: 'Moisture',
+                value: '12.5',
+                unit: '%'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Soil',
+                type: 'pH',
+                value: '4',
+                unit: 'pH Scale'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Air',
+                type: 'Relative Humidity',
+                value: '69.74',
+                unit: '%'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Air',
+                type: 'PAR',
+                value: '9',
+                unit: 'umol m^-2 s^-1'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Air',
+                type: 'Light',
+                value: '21',
+                unit: 'Lux'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Air',
+                type: 'Temperature',
+                value: '28.1',
+                unit: '°C'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Soil',
+                type: 'Phosphorus',
+                value: '10',
+                unit: 'lb/a'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Soil',
+                type: 'Nitrogen',
+                value: '0',
+                unit: 'lb/a'
+            }
+        ]
+    },
+    {
+        title: 'ACTS Tree 5a',
+        location: {
+            lat: -3.251281,
+            lng: -72.907121
+        },
+        images: [
+            {
+                title: 'Site',
+                url: 'ACTS_Tree_5a/0.jpg',
+                date: '2018-07-06'
+            },
+            {
+                title: 'Top',
+                url: 'ACTS_Tree_5a/1.jpg',
+                date: '2018-07-06'
+            },
+            {
+                title: 'Front',
+                url: 'ACTS_Tree_5a/2.jpg',
+                date: '2018-07-06'
+            }
+        ],
+        notes: [
+
+        ],
+        data: [
+            {
+                date: '2018-07-06',
+                factor: 'Location',
+                type: 'Latitude',
+                value: '-3.251281',
+                unit: '°'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Location',
+                type: 'Longitude',
+                value: '-72.907121',
+                unit: '°'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Location',
+                type: 'Altitude',
+                value: '137.442622',
+                unit: 'm'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Air',
+                type: 'UVB',
+                value: '16.1',
+                unit: 'mW/m^2'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Soil',
+                type: 'Moisture',
+                value: '13.1',
+                unit: '%'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Soil',
+                type: 'pH',
+                value: '4',
+                unit: 'pH Scale'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Air',
+                type: 'Relative Humidity',
+                value: '71.52',
+                unit: '%'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Air',
+                type: 'PAR',
+                value: '9',
+                unit: 'umol m^-2 s^-1'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Air',
+                type: 'Light',
+                value: '47',
+                unit: 'Lux'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Air',
+                type: 'Temperature',
+                value: '28.9',
+                unit: '°C'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Soil',
+                type: 'Phosphorus',
+                value: '5',
+                unit: 'lb/a'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Soil',
+                type: 'Nitrogen',
+                value: '0',
+                unit: 'lb/a'
+            }
+        ]
+    },
+    {
+        title: 'ACTS Tree 8',
+        location: {
+            lat: -3.251821,
+            lng: -72.906731
+        },
+        images: [
+            {
+                title: 'Site',
+                url: 'ACTS_Tree_8/0.jpg',
+                date: '2018-07-06'
+            },
+            {
+                title: 'Top',
+                url: 'ACTS_Tree_8/1.jpg',
+                date: '2018-07-06'
+            },
+            {
+                title: 'Front',
+                url: 'ACTS_Tree_8/2.jpg',
+                date: '2018-07-06'
+            }
+        ],
+        notes: [
+
+        ],
+        data: [
+            {
+                date: '2018-07-06',
+                factor: 'Location',
+                type: 'Latitude',
+                value: '-3.251821',
+                unit: '°'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Location',
+                type: 'Longitude',
+                value: '-72.906731',
+                unit: '°'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Location',
+                type: 'Altitude',
+                value: '137.442628',
+                unit: 'm'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Air',
+                type: 'UVB',
+                value: '15.7',
+                unit: 'mW/m^2'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Soil',
+                type: 'Moisture',
+                value: '14.5',
+                unit: '%'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Soil',
+                type: 'pH',
+                value: '4',
+                unit: 'pH Scale'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Air',
+                type: 'Relative Humidity',
+                value: '82.23',
+                unit: '%'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Air',
+                type: 'PAR',
+                value: '6',
+                unit: 'umol m^-2 s^-1'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Air',
+                type: 'Light',
+                value: '12',
+                unit: 'Lux'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Air',
+                type: 'Temperature',
+                value: '27',
+                unit: '°C'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Soil',
+                type: 'Phosphorus',
+                value: '0',
+                unit: 'lb/a'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Soil',
+                type: 'Nitrogen',
+                value: '0',
+                unit: 'lb/a'
+            }
+        ]
+    },
+    {
+        title: 'ACTS Tree 11',
+        location: {
+            lat: -3.252049,
+            lng: -72.906150
+        },
+        images: [
+            {
+                title: 'Site',
+                url: 'ACTS_Tree_11/0.jpg',
+                date: '2018-07-06'
+            },
+            {
+                title: 'Front',
+                url: 'ACTS_Tree_11/1.jpg',
+                date: '2018-07-06'
+            },
+            {
+                title: 'Top',
+                url: 'ACTS_Tree_11/2.jpg',
+                date: '2018-07-06'
+            }
+        ],
+        notes: [
+
+        ],
+        data: [
+            {
+                date: '2018-07-06',
+                factor: 'Location',
+                type: 'Latitude',
+                value: '-3.252049',
+                unit: '°'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Location',
+                type: 'Longitude',
+                value: '-72.906150',
+                unit: '°'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Location',
+                type: 'Altitude',
+                value: '132.211881',
+                unit: 'm'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Air',
+                type: 'UVB',
+                value: '15.7',
+                unit: 'mW/m^2'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Soil',
+                type: 'Moisture',
+                value: '14.5',
+                unit: '%'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Soil',
+                type: 'pH',
+                value: '4',
+                unit: 'pH Scale'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Air',
+                type: 'Relative Humidity',
+                value: '82.23',
+                unit: '%'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Air',
+                type: 'PAR',
+                value: '6',
+                unit: 'umol m^-2 s^-1'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Air',
+                type: 'Light',
+                value: '12',
+                unit: 'Lux'
+            },
+            {
+                date: '2018-07-06',
+                factor: 'Air',
+                type: 'Temperature',
+                value: '27',
+                unit: '°C'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Soil',
+                type: 'Phosphorus',
+                value: '0',
+                unit: 'lb/a'
+            },
+            {
+                date: '2018-07-11',
+                factor: 'Soil',
+                type: 'Nitrogen',
+                value: '0',
+                unit: 'lb/a'
+            }
+        ]
+    },
+    {
+        title: 'Napo Lodge',
+        location: {
+            lat: -3.257822,
+            lng: -72.917472
+        },
+        images: [
+            {
+                title: 'Site',
+                url: 'Napo_Lodge/0.jpg',
+                date: '2018-06-30'
+            }
+        ],
+        notes: [
+
+        ],
+        data: [
+            {
+                date: '2018-06-30',
+                factor: 'Location',
+                type: 'Latitude',
+                value: '-3.25782',
+                unit: '°'
+            },
+            {
+                date: '2018-06-30',
+                factor: 'Location',
+                type: 'Longitude',
+                value: '-72.917472',
+                unit: '°'
+            },
+            {
+                date: '2018-06-30',
+                factor: 'Location',
+                type: 'Altitude',
+                value: '93.738615',
+                unit: 'm'
+            },
+            {
+                date: '2018-06-30',
+                factor: 'Air',
+                type: 'Temperature',
+                value: '85',
+                unit: '°F'
+            }
+        ]
+    },
+    {
+        title: 'ReNuPeru Fish Pond',
+        location: {
+            lat: -3.258941,
+            lng: -72.915703
+        },
+        images: [
+            {
+                title: 'Site',
+                url: 'ReNuPeru_Fish_Pond/0.jpg',
+                date: '2018-06-30'
+            }
+        ],
+        notes: [
+
+        ],
+        data: [
+            {
+                date: '2018-06-30',
+                factor: 'Location',
+                type: 'Latitude',
+                value: '-3.258941',
+                unit: '°'
+            },
+            {
+                date: '2018-06-30',
+                factor: 'Location',
+                type: 'Longitude',
+                value: '-72.915703',
+                unit: '°'
+            },
+            {
+                date: '2018-06-30',
+                factor: 'Location',
+                type: 'Altitude',
+                value: '105.127309',
+                unit: 'm'
             }
         ]
     }
-];
+].sort(function (lhs, rhs) {
+    let x = lhs.title.toLowerCase();
+    let y = rhs.title.toLowerCase();
+    if (x < y) {return -1;}
+    if (x > y) {return 1;}
+    return 0;
+});
 
 const mapElement = document.getElementById('map');
 const sitesElement = document.getElementById('sites');
@@ -446,6 +1297,7 @@ function showSiteDetails(marker) {
             unitColumn.innerText = data.unit;
 
             let tableRow = document.createElement('tr');
+            tableRow.style.textAlign = 'center';
             tableRow.appendChild(dateColumn);
             tableRow.appendChild(factorColumn);
             tableRow.appendChild(typeColumn);
@@ -503,7 +1355,7 @@ siteData.forEach(function (siteData, index) {
     };
 
     let siteTitle = document.getElementById('site-title-' + siteIndex);
-    siteTitle.innerText = siteIndex + '.' + siteData.title;
+    siteTitle.innerText = siteIndex + '. ' + siteData.title;
     siteTitle.onclick = function () {
         setSelectedMarker(marker, false);
     };
