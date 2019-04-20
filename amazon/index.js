@@ -364,7 +364,7 @@ function showSiteDetails(marker) {
     });
 
     let dataNotesText = document.getElementById('data-notes-text');
-    dataNotesText.innerText = '';
+    dataNotesText.value = '';
     marker.siteData.notes.forEach(function (note, index) {
         if (index === 0) {
             dataNotesText.value = note;
