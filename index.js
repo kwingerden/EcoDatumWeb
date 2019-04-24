@@ -115,70 +115,70 @@ function addERHSSites() {
         34.883979,
         -120.422244,
         '1',
-        'ehrs/site1/2.png',
+        'erhs/site1/2.png',
         'Tree 1',
         33);
     addERHSSite(
         34.884032,
         -120.421759,
         '2',
-        'ehrs/site2/2.png',
+        'erhs/site2/2.png',
         'Tree 2',
         139);
     addERHSSite(
         34.884147,
         -120.421879,
         '3',
-        'ehrs/site2/3.png',
+        'erhs/site2/3.png',
         'Tree 3',
         276);
     addERHSSite(
         34.884177,
         -120.421666,
         '4',
-        'ehrs/site4/2.png',
+        'erhs/site4/2.png',
         'Tree 4',
         124);
     addERHSSite(
         34.884130,
         -120.421577,
         '5',
-        'ehrs/site2/4.png',
+        'erhs/site2/4.png',
         'Tree 5',
         67);
     addERHSSite(
         34.884085,
         -120.421600,
         '6',
-        'ehrs/site2/6.png',
+        'erhs/site2/6.png',
         'Tree 6',
         33);
     addERHSSite(
         34.884036,
         -120.421627,
         '7',
-        'ehrs/site2/5.png',
+        'erhs/site2/5.png',
         'Tree 7',
         24);
     addERHSSite(
         34.883844,
         -120.421487,
         '8',
-        'ehrs/site3/2.png',
+        'erhs/site3/2.png',
         'Tree 8',
         132);
     addERHSSite(
         34.883953,
         -120.421279,
         '9',
-        'ehrs/site3/4.png',
+        'erhs/site3/4.png',
         'Tree 9',
         25);
     addERHSSite(
         34.883964,
         -120.421024,
         '10',
-        'ehrs/site3/3.png',
+        'erhs/site3/3.png',
         'Tree 10',
         57);
 }
