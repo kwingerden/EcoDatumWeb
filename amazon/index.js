@@ -1177,7 +1177,7 @@ function showSiteDetails(marker) {
     marker.siteData.images.forEach(function (img) {
         let titleElement = document.createElement('p');
         titleElement.style.textAlign = 'center';
-        titleElement.style.fontSize = '10px';
+        titleElement.style.fontSize = '16px';
         titleElement.innerText = img.title == null ? ' ' : img.title;
 
         let imgElement = document.createElement('img');
@@ -1185,7 +1185,7 @@ function showSiteDetails(marker) {
 
         let dateLabel = document.createElement('p');
         dateLabel.style.textAlign = 'center';
-        dateLabel.style.fontSize = '10px';
+        dateLabel.style.fontSize = '16px';
         dateLabel.innerText = img.date;
 
         let itemDiv = document.createElement('div');
@@ -1201,17 +1201,9 @@ function showSiteDetails(marker) {
         loop: false,
         margin: 10,
         nav: true,
-        responsive: {
-            0: {
-                items: 1
-            },
-            600: {
-                items: 3
-            },
-            1000: {
-                items: 5
-            }
-        }
+        autoHeight: false,
+        center: false,
+        items: 3
     });
 
     let dataNotesText = document.getElementById('data-notes-text');
