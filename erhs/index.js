@@ -19,8 +19,13 @@ let siteData = [
         images: [
             {
                 title: 'Tree 1',
-                url: 'site1/2.png',
+                url: 'tree1/2018-05-30.jpg',
                 date: '2018-05-30'
+            },
+            {
+                title: 'Tree 1',
+                url: 'tree1/2019-05-04.jpg',
+                date: '2019-05-04'
             }
         ],
         notes: [
@@ -59,8 +64,13 @@ let siteData = [
         images: [
             {
                 title: 'Tree 2',
-                url: 'site2/2.png',
+                url: 'tree2/2018-05-30.jpg',
                 date: '2018-05-30'
+            },
+            {
+                title: 'Tree 2',
+                url: 'tree2/2019-05-04.jpg',
+                date: '2019-05-04'
             }
         ],
         notes: [
@@ -99,8 +109,13 @@ let siteData = [
         images: [
             {
                 title: 'Tree 3',
-                url: 'site2/3.png',
+                url: 'tree3/2018-05-30.jpg',
                 date: '2018-05-30'
+            },
+            {
+                title: 'Tree 3',
+                url: 'tree3/2019-05-04.jpg',
+                date: '2019-05-04'
             }
         ],
         notes: [
@@ -139,8 +154,13 @@ let siteData = [
         images: [
             {
                 title: 'Tree 4',
-                url: 'site4/2.png',
+                url: 'tree4/2018-05-30.jpg',
                 date: '2018-05-30'
+            },
+            {
+                title: 'Tree 4',
+                url: 'tree4/2019-05-04.jpg',
+                date: '2019-05-04'
             }
         ],
         notes: [
@@ -179,8 +199,13 @@ let siteData = [
         images: [
             {
                 title: 'Tree 5',
-                url: 'site2/4.png',
+                url: 'tree5/2018-05-30.jpg',
                 date: '2018-05-30'
+            },
+            {
+                title: 'Tree 5',
+                url: 'tree5/2019-05-04.jpg',
+                date: '2019-05-04'
             }
         ],
         notes: [
@@ -219,8 +244,13 @@ let siteData = [
         images: [
             {
                 title: 'Tree 6',
-                url: 'site2/6.png',
+                url: 'tree6/2018-05-30.jpg',
                 date: '2018-05-30'
+            },
+            {
+                title: 'Tree 6',
+                url: 'tree6/2019-05-04.jpg',
+                date: '2019-05-04'
             }
         ],
         notes: [
@@ -259,12 +289,12 @@ let siteData = [
         images: [
             {
                 title: 'Tree 7',
-                url: 'site2/5.png',
+                url: 'tree7/2018-05-30.jpg',
                 date: '2018-05-30'
             }
         ],
         notes: [
-
+            "Unfortunately, this tree was removed from the Righetti campus and will no longer be tracked."
         ],
         data: [
             {
@@ -299,8 +329,13 @@ let siteData = [
         images: [
             {
                 title: 'Tree 8',
-                url: 'site3/2.png',
+                url: 'tree8/2018-05-30.jpg',
                 date: '2018-05-30'
+            },
+            {
+                title: 'Tree 8',
+                url: 'tree8/2019-05-04.jpg',
+                date: '2019-05-04'
             }
         ],
         notes: [
@@ -339,12 +374,12 @@ let siteData = [
         images: [
             {
                 title: 'Tree 9',
-                url: 'site3/4.png',
+                url: 'tree9/2018-05-30.jpg',
                 date: '2018-05-30'
             }
         ],
         notes: [
-
+            "Unfortunately, this tree was removed from the Righetti campus and will no longer be tracked."
         ],
         data: [
             {
@@ -379,8 +414,13 @@ let siteData = [
         images: [
             {
                 title: 'Tree 10',
-                url: 'site3/3.png',
+                url: 'tree10/2018-05-30.jpg',
                 date: '2018-05-30'
+            },
+            {
+                title: 'Tree 10',
+                url: 'tree10/2019-05-04.jpg',
+                date: '2019-05-04'
             }
         ],
         notes: [
@@ -407,6 +447,72 @@ let siteData = [
                 type: 'Carbon',
                 value: '57',
                 unit: 'kg'
+            }
+        ]
+    },
+    {
+        title: 'Tree 11',
+        location: {
+            lat: 34.884004,
+            lng: -120.420957
+        },
+        images: [
+            {
+                title: 'Tree 11',
+                url: 'tree11/2019-05-04.jpg',
+                date: '2019-05-04'
+            }
+        ],
+        notes: [
+            "This is a new tree added to the dataset since trees 7 and 9 have been removed."
+        ],
+        data: [
+            {
+                date: '2019-05-04',
+                factor: 'Location',
+                type: 'Latitude',
+                value: '34.884004',
+                unit: '°'
+            },
+            {
+                date: '2019-05-04',
+                factor: 'Location',
+                type: 'Longitude',
+                value: '-120.420957',
+                unit: '°'
+            }
+        ]
+    },
+    {
+        title: 'Tree 12',
+        location: {
+            lat: 34.884088,
+            lng: -120.420873
+        },
+        images: [
+            {
+                title: 'Tree 12',
+                url: 'tree12/2019-05-04.jpg',
+                date: '2019-05-04'
+            }
+        ],
+        notes: [
+            "This is a new tree added to the dataset since trees 7 and 9 have been removed."
+        ],
+        data: [
+            {
+                date: '2019-05-04',
+                factor: 'Location',
+                type: 'Latitude',
+                value: '34.884088',
+                unit: '°'
+            },
+            {
+                date: '2019-05-04',
+                factor: 'Location',
+                type: 'Longitude',
+                value: '-120.420873',
+                unit: '°'
             }
         ]
     }
@@ -495,7 +601,6 @@ function showSiteDetails(marker) {
         items: 3
     });
 
-    /*
     let dataNotesText = document.getElementById('data-notes-text');
     dataNotesText.value = '';
     marker.siteData.notes.forEach(function (note, index) {
@@ -506,7 +611,6 @@ function showSiteDetails(marker) {
         }
 
     });
-    */
 
     let dataTableDiv = document.getElementById('data-table-div');
     dataTableDiv.innerHTML = '';

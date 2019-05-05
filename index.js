@@ -115,14 +115,14 @@ function addERHSSites() {
         34.883979,
         -120.422244,
         '1',
-        'erhs/site1/2.png',
+        'erhs/site1/2018-05-30.png',
         'Tree 1',
         33);
     addERHSSite(
         34.884032,
         -120.421759,
         '2',
-        'erhs/site2/2.png',
+        'erhs/site2/2018-05-30.png',
         'Tree 2',
         139);
     addERHSSite(
@@ -136,7 +136,7 @@ function addERHSSites() {
         34.884177,
         -120.421666,
         '4',
-        'erhs/site4/2.png',
+        'erhs/site4/2018-05-30.png',
         'Tree 4',
         124);
     addERHSSite(
@@ -164,7 +164,7 @@ function addERHSSites() {
         34.883844,
         -120.421487,
         '8',
-        'erhs/site3/2.png',
+        'erhs/site3/2018-05-30.png',
         'Tree 8',
         132);
     addERHSSite(
