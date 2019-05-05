@@ -777,5 +777,12 @@ function updateElementHeights() {
     mapElement.style.height = height + 'px';
 }
 
-window.onload = updateElementHeights;
+window.onload = function() {
+    updateElementHeights();
+    if (window.location.hash) {
+        let siteNumber = parseInt(window.location.hash.replace("#", "")) - 1;
+        let marker = markers[siteNumber];
+        setSelectedMarker(marker);
+    }
+};
 window.onresize = updateElementHeights;
