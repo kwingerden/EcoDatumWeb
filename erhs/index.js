@@ -52,6 +52,13 @@ let siteData = [
                 type: 'Carbon',
                 value: '33',
                 unit: 'kg'
+            },
+            {
+                date: '2019-05-30',
+                factor: 'Biotic',
+                type: 'Carbon',
+                value: '35.47',
+                unit: 'kg'
             }
         ]
     },
@@ -96,6 +103,13 @@ let siteData = [
                 factor: 'Biotic',
                 type: 'Carbon',
                 value: '139',
+                unit: 'kg'
+            },
+            {
+                date: '2019-05-30',
+                factor: 'Biotic',
+                type: 'Carbon',
+                value: '164.62',
                 unit: 'kg'
             }
         ]
@@ -142,6 +156,13 @@ let siteData = [
                 type: 'Carbon',
                 value: '276',
                 unit: 'kg'
+            },
+            {
+                date: '2019-05-30',
+                factor: 'Biotic',
+                type: 'Carbon',
+                value: '294.28',
+                unit: 'kg'
             }
         ]
     },
@@ -186,6 +207,13 @@ let siteData = [
                 factor: 'Biotic',
                 type: 'Carbon',
                 value: '124',
+                unit: 'kg'
+            },
+            {
+                date: '2018-05-30',
+                factor: 'Biotic',
+                type: 'Carbon',
+                value: '144.94',
                 unit: 'kg'
             }
         ]
@@ -232,6 +260,13 @@ let siteData = [
                 type: 'Carbon',
                 value: '67',
                 unit: 'kg'
+            },
+            {
+                date: '2019-05-30',
+                factor: 'Biotic',
+                type: 'Carbon',
+                value: '47.69',
+                unit: 'kg'
             }
         ]
     },
@@ -276,6 +311,13 @@ let siteData = [
                 factor: 'Biotic',
                 type: 'Carbon',
                 value: '33',
+                unit: 'kg'
+            },
+            {
+                date: '2019-05-30',
+                factor: 'Biotic',
+                type: 'Carbon',
+                value: '35.67',
                 unit: 'kg'
             }
         ]
@@ -362,6 +404,13 @@ let siteData = [
                 type: 'Carbon',
                 value: '132',
                 unit: 'kg'
+            },
+            {
+                date: '2019-05-30',
+                factor: 'Biotic',
+                type: 'Carbon',
+                value: '113.79',
+                unit: 'kg'
             }
         ]
     },
@@ -447,6 +496,13 @@ let siteData = [
                 type: 'Carbon',
                 value: '57',
                 unit: 'kg'
+            },
+            {
+                date: '2019-05-30',
+                factor: 'Biotic',
+                type: 'Carbon',
+                value: '45.73',
+                unit: 'kg'
             }
         ]
     },
@@ -480,6 +536,13 @@ let siteData = [
                 type: 'Longitude',
                 value: '-120.420957',
                 unit: '°'
+            },
+            {
+                date: '2019-05-30',
+                factor: 'Biotic',
+                type: 'Carbon',
+                value: '30.57',
+                unit: 'kg'
             }
         ]
     },
@@ -513,6 +576,13 @@ let siteData = [
                 type: 'Longitude',
                 value: '-120.420873',
                 unit: '°'
+            },
+            {
+                date: '2019-05-30',
+                factor: 'Biotic',
+                type: 'Carbon',
+                value: '24.88',
+                unit: 'kg'
             }
         ]
     }
