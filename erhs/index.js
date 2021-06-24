@@ -585,6 +585,46 @@ let siteData = [
                 unit: 'kg'
             }
         ]
+    },
+    {
+        title: 'Tree 13',
+        location: {
+            lat: 34.884088,
+            lng: -120.420873
+        },
+        images: [
+            {
+                title: 'Tree 13',
+                url: 'tree13/2021-05-04.jpg',
+                date: '2019-05-04'
+            }
+        ],
+        notes: [
+            "This is a new tree added to the dataset since trees 7 and 9 have been removed."
+        ],
+        data: [
+            {
+                date: '2019-05-04',
+                factor: 'Location',
+                type: 'Latitude',
+                value: '34.884088',
+                unit: '°'
+            },
+            {
+                date: '2019-05-04',
+                factor: 'Location',
+                type: 'Longitude',
+                value: '-120.420873',
+                unit: '°'
+            },
+            {
+                date: '2019-05-30',
+                factor: 'Biotic',
+                type: 'Carbon',
+                value: '24.88',
+                unit: 'kg'
+            }
+        ]
     }
 ];
 
@@ -638,13 +678,6 @@ function showSiteDetails(marker) {
     dataCarousel.appendChild(owlCarouselDiv);
 
     marker.siteData.images.forEach(function (img) {
-        /*
-        let titleElement = document.createElement('p');
-        titleElement.style.textAlign = 'center';
-        titleElement.style.fontSize = '16px';
-        titleElement.innerText = img.title == null ? ' ' : img.title;
-        */
-
         let imgElement = document.createElement('img');
         imgElement.src = img.url;
 
@@ -655,7 +688,6 @@ function showSiteDetails(marker) {
 
         let itemDiv = document.createElement('div');
         itemDiv.className = 'item';
-        //itemDiv.appendChild(titleElement);
         itemDiv.appendChild(imgElement);
         itemDiv.appendChild(dateLabel);
 
@@ -795,7 +827,7 @@ siteData.forEach(function (siteData, index) {
     let titleElement = document.createElement('a');
     titleElement.href = '#';
     titleElement.innerText = siteData.title;
-    titleElement.onclick = function() {
+    titleElement.onclick = function () {
         showSiteDetails(marker);
     };
     marker.infoWindow = new google.maps.InfoWindow({
@@ -847,7 +879,7 @@ function updateElementHeights() {
     mapElement.style.height = height + 'px';
 }
 
-window.onload = function() {
+window.onload = function () {
     updateElementHeights();
     if (window.location.hash) {
         let siteNumber = parseInt(window.location.hash.replace("#", "")) - 1;
