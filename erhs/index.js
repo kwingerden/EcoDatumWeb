@@ -26,6 +26,11 @@ let siteData = [
                 title: 'Tree 1',
                 url: 'tree1/2019-05-04.jpg',
                 date: '2019-05-04'
+            },
+            {
+                title: 'Tree 1',
+                url: 'tree1/2021-06-01.jpg',
+                date: '2021-06-01'
             }
         ],
         notes: [
@@ -59,6 +64,13 @@ let siteData = [
                 type: 'Carbon',
                 value: '35.47',
                 unit: 'kg'
+            },
+            {
+                date: '2021-06-01',
+                factor: 'Biotic',
+                type: 'Carbon',
+                value: '84.50',
+                unit: 'kg'
             }
         ]
     },
@@ -78,6 +90,11 @@ let siteData = [
                 title: 'Tree 2',
                 url: 'tree2/2019-05-04.jpg',
                 date: '2019-05-04'
+            },
+            {
+                title: 'Tree 2',
+                url: 'tree2/2021-06-01.jpg',
+                date: '2021-06-01'
             }
         ],
         notes: [
@@ -111,6 +128,13 @@ let siteData = [
                 type: 'Carbon',
                 value: '164.62',
                 unit: 'kg'
+            },
+            {
+                date: '2021-06-01',
+                factor: 'Biotic',
+                type: 'Carbon',
+                value: '263.50',
+                unit: 'kg'
             }
         ]
     },
@@ -130,6 +154,11 @@ let siteData = [
                 title: 'Tree 3',
                 url: 'tree3/2019-05-04.jpg',
                 date: '2019-05-04'
+            },
+            {
+                title: 'Tree 3',
+                url: 'tree3/2021-06-01.jpg',
+                date: '2021-06-01'
             }
         ],
         notes: [
@@ -163,6 +192,13 @@ let siteData = [
                 type: 'Carbon',
                 value: '294.28',
                 unit: 'kg'
+            },
+            {
+                date: '2021-06-01',
+                factor: 'Biotic',
+                type: 'Carbon',
+                value: '621.17',
+                unit: 'kg'
             }
         ]
     },
@@ -182,6 +218,11 @@ let siteData = [
                 title: 'Tree 4',
                 url: 'tree4/2019-05-04.jpg',
                 date: '2019-05-04'
+            },
+            {
+                title: 'Tree 4',
+                url: 'tree4/2021-06-01.jpg',
+                date: '2021-06-01'
             }
         ],
         notes: [
@@ -210,10 +251,17 @@ let siteData = [
                 unit: 'kg'
             },
             {
-                date: '2018-05-30',
+                date: '2019-05-30',
                 factor: 'Biotic',
                 type: 'Carbon',
                 value: '144.94',
+                unit: 'kg'
+            },
+            {
+                date: '2021-06-01',
+                factor: 'Biotic',
+                type: 'Carbon',
+                value: '257.17',
                 unit: 'kg'
             }
         ]
@@ -234,6 +282,11 @@ let siteData = [
                 title: 'Tree 5',
                 url: 'tree5/2019-05-04.jpg',
                 date: '2019-05-04'
+            },
+            {
+                title: 'Tree 5',
+                url: 'tree5/2021-06-01.jpg',
+                date: '2021-06-01'
             }
         ],
         notes: [
@@ -267,6 +320,13 @@ let siteData = [
                 type: 'Carbon',
                 value: '47.69',
                 unit: 'kg'
+            },
+            {
+                date: '2021-06-01',
+                factor: 'Biotic',
+                type: 'Carbon',
+                value: '94.00',
+                unit: 'kg'
             }
         ]
     },
@@ -286,6 +346,11 @@ let siteData = [
                 title: 'Tree 6',
                 url: 'tree6/2019-05-04.jpg',
                 date: '2019-05-04'
+            },
+            {
+                title: 'Tree 6',
+                url: 'tree6/2021-06-01.jpg',
+                date: '2021-06-01'
             }
         ],
         notes: [
@@ -319,6 +384,13 @@ let siteData = [
                 type: 'Carbon',
                 value: '35.67',
                 unit: 'kg'
+            },
+            {
+                date: '2021-06-01',
+                factor: 'Biotic',
+                type: 'Carbon',
+                value: '82.67',
+                unit: 'kg'
             }
         ]
     },
@@ -336,7 +408,7 @@ let siteData = [
             }
         ],
         notes: [
-            "Unfortunately, this tree was removed from the Righetti campus and will no longer be tracked."
+            "2019-05-04: Unfortunately, this tree was removed from the Righetti campus and will no longer be tracked."
         ],
         data: [
             {
@@ -378,6 +450,11 @@ let siteData = [
                 title: 'Tree 8',
                 url: 'tree8/2019-05-04.jpg',
                 date: '2019-05-04'
+            },
+            {
+                title: 'Tree 8',
+                url: 'tree8/2021-06-01.jpg',
+                date: '2021-06-01'
             }
         ],
         notes: [
@@ -411,6 +488,13 @@ let siteData = [
                 type: 'Carbon',
                 value: '113.79',
                 unit: 'kg'
+            },
+            {
+                date: '2021-06-01',
+                factor: 'Biotic',
+                type: 'Carbon',
+                value: '181.00',
+                unit: 'kg'
             }
         ]
     },
@@ -428,7 +512,7 @@ let siteData = [
             }
         ],
         notes: [
-            "Unfortunately, this tree was removed from the Righetti campus and will no longer be tracked."
+            "2019-05-04: Unfortunately, this tree was removed from the Righetti campus and will no longer be tracked."
         ],
         data: [
             {
@@ -470,6 +554,11 @@ let siteData = [
                 title: 'Tree 10',
                 url: 'tree10/2019-05-04.jpg',
                 date: '2019-05-04'
+            },
+            {
+                title: 'Tree 10',
+                url: 'tree10/2021-06-01.jpg',
+                date: '2021-06-01'
             }
         ],
         notes: [
@@ -503,6 +592,13 @@ let siteData = [
                 type: 'Carbon',
                 value: '45.73',
                 unit: 'kg'
+            },
+            {
+                date: '2021-06-01',
+                factor: 'Biotic',
+                type: 'Carbon',
+                value: '79.83',
+                unit: 'kg'
             }
         ]
     },
@@ -517,10 +613,15 @@ let siteData = [
                 title: 'Tree 11',
                 url: 'tree11/2019-05-04.jpg',
                 date: '2019-05-04'
+            },
+            {
+                title: 'Tree 11',
+                url: 'tree11/2021-06-01.jpg',
+                date: '2021-06-01'
             }
         ],
         notes: [
-            "This is a new tree added to the dataset since trees 7 and 9 have been removed."
+            "2019-05-30: This is a new tree added to the dataset since trees 7 and 9 have been removed."
         ],
         data: [
             {
@@ -543,6 +644,13 @@ let siteData = [
                 type: 'Carbon',
                 value: '30.57',
                 unit: 'kg'
+            },
+            {
+                date: '2021-06-01',
+                factor: 'Biotic',
+                type: 'Carbon',
+                value: '41.00',
+                unit: 'kg'
             }
         ]
     },
@@ -560,7 +668,7 @@ let siteData = [
             }
         ],
         notes: [
-            "This is a new tree added to the dataset since trees 7 and 9 have been removed."
+            "2019-05-04: This is a new tree added to the dataset since trees 7 and 9 have been removed.\n2021-06-01: This tree has been removed."
         ],
         data: [
             {
@@ -589,39 +697,25 @@ let siteData = [
     {
         title: 'Tree 13',
         location: {
-            lat: 34.884088,
-            lng: -120.420873
+            lat: 34.883797,
+            lng: -120.420917
         },
         images: [
             {
                 title: 'Tree 13',
-                url: 'tree13/2021-05-04.jpg',
-                date: '2019-05-04'
+                url: 'tree13/2021-06-01.jpg',
+                date: '2021-06-01'
             }
         ],
         notes: [
-            "This is a new tree added to the dataset since trees 7 and 9 have been removed."
+            "2021-06-01: This is a new tree added to the dataset since tree 12 has been removed."
         ],
         data: [
             {
-                date: '2019-05-04',
-                factor: 'Location',
-                type: 'Latitude',
-                value: '34.884088',
-                unit: '°'
-            },
-            {
-                date: '2019-05-04',
-                factor: 'Location',
-                type: 'Longitude',
-                value: '-120.420873',
-                unit: '°'
-            },
-            {
-                date: '2019-05-30',
+                date: '2021-06-01',
                 factor: 'Biotic',
                 type: 'Carbon',
-                value: '24.88',
+                value: '77.00',
                 unit: 'kg'
             }
         ]
