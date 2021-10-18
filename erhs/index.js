@@ -69,7 +69,7 @@ let siteData = [
                 date: '2021-06-01',
                 factor: 'Biotic',
                 type: 'Carbon',
-                value: '84.50',
+                value: '48',
                 unit: 'kg'
             }
         ]
@@ -133,7 +133,7 @@ let siteData = [
                 date: '2021-06-01',
                 factor: 'Biotic',
                 type: 'Carbon',
-                value: '263.50',
+                value: '238',
                 unit: 'kg'
             }
         ]
@@ -197,7 +197,7 @@ let siteData = [
                 date: '2021-06-01',
                 factor: 'Biotic',
                 type: 'Carbon',
-                value: '621.17',
+                value: '484',
                 unit: 'kg'
             }
         ]
@@ -261,7 +261,7 @@ let siteData = [
                 date: '2021-06-01',
                 factor: 'Biotic',
                 type: 'Carbon',
-                value: '257.17',
+                value: '200',
                 unit: 'kg'
             }
         ]
@@ -325,7 +325,7 @@ let siteData = [
                 date: '2021-06-01',
                 factor: 'Biotic',
                 type: 'Carbon',
-                value: '94.00',
+                value: '57',
                 unit: 'kg'
             }
         ]
@@ -389,7 +389,7 @@ let siteData = [
                 date: '2021-06-01',
                 factor: 'Biotic',
                 type: 'Carbon',
-                value: '82.67',
+                value: '48',
                 unit: 'kg'
             }
         ]
@@ -493,7 +493,7 @@ let siteData = [
                 date: '2021-06-01',
                 factor: 'Biotic',
                 type: 'Carbon',
-                value: '181.00',
+                value: '124',
                 unit: 'kg'
             }
         ]
@@ -597,7 +597,7 @@ let siteData = [
                 date: '2021-06-01',
                 factor: 'Biotic',
                 type: 'Carbon',
-                value: '79.83',
+                value: '60',
                 unit: 'kg'
             }
         ]
@@ -649,7 +649,7 @@ let siteData = [
                 date: '2021-06-01',
                 factor: 'Biotic',
                 type: 'Carbon',
-                value: '41.00',
+                value: '38',
                 unit: 'kg'
             }
         ]
@@ -715,7 +715,7 @@ let siteData = [
                 date: '2021-06-01',
                 factor: 'Biotic',
                 type: 'Carbon',
-                value: '77.00',
+                value: '89',
                 unit: 'kg'
             }
         ]
