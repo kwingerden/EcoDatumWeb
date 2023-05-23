@@ -74,6 +74,13 @@ let siteData = [
                 date: '2021-06-01',
                 factor: 'Biotic',
                 type: 'Carbon',
+                value: '48',
+                unit: 'kg'
+            },
+            {
+                date: '2022-05-24',
+                factor: 'Biotic',
+                type: 'Carbon',
                 value: '94',
                 unit: 'kg'
             }
