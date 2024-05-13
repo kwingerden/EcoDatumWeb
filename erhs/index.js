@@ -41,6 +41,11 @@ let siteData = [
                 title: 'Tree 1',
                 url: 'tree1/2023-05-26.jpg',
                 date: '2023-05-26'
+            },
+            {
+                title: 'Tree 1',
+                url: 'tree1/2024-05-13.jpg',
+                date: '2024-05-13'
             }
         ],
         notes: [
@@ -93,7 +98,14 @@ let siteData = [
                 date: '2023-05-26',
                 factor: 'Biotic',
                 type: 'Carbon',
-                value: '168',
+                value: '94',
+                unit: 'kg'
+            },
+            {
+                date: '2024-05-13',
+                factor: 'Biotic',
+                type: 'Carbon',
+                value: '94',
                 unit: 'kg'
             }
         ]
@@ -129,6 +141,11 @@ let siteData = [
                 title: 'Tree 2',
                 url: 'tree2/2023-05-26.jpg',
                 date: '2023-05-26'
+            },
+            {
+                title: 'Tree 2',
+                url: 'tree2/2024-05-13.jpg',
+                date: '2024-05-13'
             }
         ],
         notes: [
@@ -181,7 +198,14 @@ let siteData = [
                 date: '2023-05-26',
                 factor: 'Biotic',
                 type: 'Carbon',
-                value: '477',
+                value: '373',
+                unit: 'kg'
+            },
+            {
+                date: '2024-05-13',
+                factor: 'Biotic',
+                type: 'Carbon',
+                value: '425',
                 unit: 'kg'
             }
         ]
@@ -217,6 +241,11 @@ let siteData = [
                 title: 'Tree 3',
                 url: 'tree3/2023-05-26.jpg',
                 date: '2023-05-26'
+            },
+            {
+                title: 'Tree 3',
+                url: 'tree3/2024-05-13.jpg',
+                date: '2024-05-13'
             }
         ],
         notes: [
@@ -269,7 +298,14 @@ let siteData = [
                 date: '2023-05-26',
                 factor: 'Biotic',
                 type: 'Carbon',
-                value: '868',
+                value: '620',
+                unit: 'kg'
+            },
+            {
+                date: '2024-05-13',
+                factor: 'Biotic',
+                type: 'Carbon',
+                value: '782',
                 unit: 'kg'
             }
         ]
@@ -305,6 +341,11 @@ let siteData = [
                 title: 'Tree 4',
                 url: 'tree4/2023-05-26.jpg',
                 date: '2023-05-26'
+            },
+            {
+                title: 'Tree 4',
+                url: 'tree4/2024-05-13.jpg',
+                date: '2024-05-13'
             }
         ],
         notes: [
@@ -359,6 +400,13 @@ let siteData = [
                 type: 'Carbon',
                 value: '321',
                 unit: 'kg'
+            },
+            {
+                date: '2024-05-13',
+                factor: 'Biotic',
+                type: 'Carbon',
+                value: '321',
+                unit: 'kg'
             }
         ]
     },
@@ -393,6 +441,11 @@ let siteData = [
                 title: 'Tree 5',
                 url: 'tree5/2023-05-26.jpg',
                 date: '2023-05-26'
+            },
+            {
+                title: 'Tree 5',
+                url: 'tree5/2024-05-13.jpg',
+                date: '2024-05-13'
             }
         ],
         notes: [
@@ -447,6 +500,13 @@ let siteData = [
                 type: 'Carbon',
                 value: '111',
                 unit: 'kg'
+            },
+            {
+                date: '2024-05-13',
+                factor: 'Biotic',
+                type: 'Carbon',
+                value: '94',
+                unit: 'kg'
             }
         ]
     },
@@ -481,6 +541,11 @@ let siteData = [
                 title: 'Tree 6',
                 url: 'tree6/2023-05-26.jpg',
                 date: '2023-05-26'
+            },
+            {
+                title: 'Tree 6',
+                url: 'tree6/2024-05-13.jpg',
+                date: '2024-05-13'
             }
         ],
         notes: [
@@ -531,6 +596,13 @@ let siteData = [
             },
             {
                 date: '2023-05-26',
+                factor: 'Biotic',
+                type: 'Carbon',
+                value: '94',
+                unit: 'kg'
+            },
+            {
+                date: '2024-05-13',
                 factor: 'Biotic',
                 type: 'Carbon',
                 value: '94',
@@ -609,6 +681,11 @@ let siteData = [
                 title: 'Tree 8',
                 url: 'tree8/2023-05-26.jpg',
                 date: '2023-05-26'
+            },
+            {
+                title: 'Tree 8',
+                url: 'tree8/2024-05-13.jpg',
+                date: '2024-05-13'
             }
         ],
         notes: [
@@ -662,6 +739,13 @@ let siteData = [
                 factor: 'Biotic',
                 type: 'Carbon',
                 value: '200',
+                unit: 'kg'
+            },
+            {
+                date: '2024-05-13',
+                factor: 'Biotic',
+                type: 'Carbon',
+                value: '269',
                 unit: 'kg'
             }
         ]
@@ -737,6 +821,11 @@ let siteData = [
                 title: 'Tree 10',
                 url: 'tree10/2023-05-26.jpg',
                 date: '2023-05-26'
+            },
+            {
+                title: 'Tree 10',
+                url: 'tree10/2024-05-13.jpg',
+                date: '2024-05-13'
             }
         ],
         notes: [
@@ -791,6 +880,13 @@ let siteData = [
                 type: 'Carbon',
                 value: '128',
                 unit: 'kg'
+            },
+            {
+                date: '2024-05-13',
+                factor: 'Biotic',
+                type: 'Carbon',
+                value: '142',
+                unit: 'kg'
             }
         ]
     },
@@ -820,6 +916,11 @@ let siteData = [
                 title: 'Tree 11',
                 url: 'tree11/2023-05-26.jpg',
                 date: '2023-05-26'
+            },
+            {
+                title: 'Tree 11',
+                url: 'tree11/2024-05-13.jpg',
+                date: '2024-05-13'
             }
         ],
         notes: [
@@ -866,6 +967,13 @@ let siteData = [
                 factor: 'Biotic',
                 type: 'Carbon',
                 value: '94',
+                unit: 'kg'
+            },
+            {
+                date: '2024-05-13',
+                factor: 'Biotic',
+                type: 'Carbon',
+                value: '77',
                 unit: 'kg'
             }
         ]
@@ -931,6 +1039,11 @@ let siteData = [
                 title: 'Tree 13',
                 url: 'tree13/2023-05-26.jpg',
                 date: '2023-05-26'
+            },
+            {
+                title: 'Tree 13',
+                url: 'tree13/2024-05-13.jpg',
+                date: '2024-05-13'
             }
         ],
         notes: [
@@ -956,6 +1069,13 @@ let siteData = [
                 factor: 'Biotic',
                 type: 'Carbon',
                 value: '168',
+                unit: 'kg'
+            },
+            {
+                date: '2024-05-13',
+                factor: 'Biotic',
+                type: 'Carbon',
+                value: '142',
                 unit: 'kg'
             }
         ]
